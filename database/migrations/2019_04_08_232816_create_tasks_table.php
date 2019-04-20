@@ -15,9 +15,9 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('manager_id')->comment('also a user');
+            $table->integer('creator')->comment('also a user');
             $table->string('description');
-            $table->tinyInteger('status')->default(1)->comment('1:active,0:deactive');
+            $table->tinyInteger('status')->default(1)->comment('1:active,0:deactive,3:finished');
             $table->integer('type_id');
             $table->timestamps();
         });

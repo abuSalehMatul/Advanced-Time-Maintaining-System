@@ -16,8 +16,7 @@ class CreateTaskLogsTable extends Migration
         Schema::create('task_logs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('editor')->comment('user_id');
-            $table->integer('task_id');
-            $table->integer('time_id');
+           
             $table->integer('record_id');
             $table->string('comment')->nullable();
             $table->timestamps();

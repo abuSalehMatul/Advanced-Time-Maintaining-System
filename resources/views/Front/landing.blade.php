@@ -1,98 +1,22 @@
 <!DOCTYPE html>
 
-<!-- Mirrored from clockify.me/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Apr 2019 07:12:48 GMT -->
 <head>
  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>The TimeREC</title>
- 
- 
-     <link rel="shortcut icon" href="{{asset('image/REC-Icon2.png')}}" type="image/x-icon">
+  <title>The TimeREC</title> 
+  <link rel="shortcut icon" href="{{asset('image/REC-Icon2.png')}}" type="image/x-icon">
 
   <link rel='stylesheet' href={{asset('css/main-012.css')}}>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <link rel="mask-icon" href="assets/images/favicon.svg" color="#03A9F4">
+  
     @include('partials.frontCSS')
  
 </head>
 <body>
 <style>
-html {
-    position: relative;
-    min-height: 100%;
-}
-.carousel-fade .carousel-inner .item {
-    opacity: 0;
-    transition-property: opacity;
-}
-.carousel-fade .carousel-inner .active {
-    opacity: 1;
-}
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-}
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
-}
-.carousel-fade .carousel-control {
-    z-index: 2;
-}
-@media all and (transform-3d),
-(-webkit-transform-3d) {
-    .carousel-fade .carousel-inner > .item.next,
-    .carousel-fade .carousel-inner > .item.active.right {
-        opacity: 0;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.prev,
-    .carousel-fade .carousel-inner > .item.active.left {
-        opacity: 0;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.next.left,
-    .carousel-fade .carousel-inner > .item.prev.right,
-    .carousel-fade .carousel-inner > .item.active {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-}
-.item:nth-child(1) {
-    background: url('{{asset('image/Times Rec.final-01.png')}}') no-repeat center center fixed;
-   
-}
-.item:nth-child(2) {
-    background: url('{{asset('image/Times Rec.final-02.png')}}') no-repeat center center fixed;
- 
-}
-.item:nth-child(3) {
-    background:url('{{asset('image/Times Rec.final-01.png')}}') no-repeat center center fixed;
-   
-}
-.carousel {
-    z-index: -99;
-}
-.carousel .item {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.title {
-  text-align: center;
-  margin-top: 10px;
-  padding: 10px;
-  text-shadow: 2px 2px #000;
-  color: #FFF;
-}
+
 </style>
 
 @include('Front.header')
@@ -103,7 +27,7 @@ html {
     <div class="hero__content awesome">
         <h1 class="hero__content__header awesome">The only truly free time tracker for teams</h1>
         <p class="hero__content__text_about awesome">The TimeREC is the only 100% free time tracking software. It's a simple time tracker and timesheet app that lets you and your team track work hours on projects. Unlimited users, free forever.</p>
-        <a href="signup.html">
+        <a href="{{url('user_register_form')}}">
         <button class="hero__button">Get started</button>
         </a>
        
@@ -411,7 +335,7 @@ html {
       <div>
         <img src="assets/images/time-tracker-app-web.png" alt="Online time tracking app and time tracker">
         <h3>Web app</h3>
-        <a class="get-started" href="signup.html"><button class="features__app-link-signup">Sign up</button></a> <a class="get-started" href="login.html"><button class="features__app-link">Log in</button></a> <a href="chrome-time-tracking.html"><button class="features__app-link">Chrome</button></a> <a href="firefox-time-tracking.html"><button class="features__app-link">Firefox</button></a>
+        <a class="get-started" ><button class="features__app-link-signup">Sign up</button></a> <a class="get-started" href="login.html"><button class="features__app-link">Log in</button></a> <a href="chrome-time-tracking.html"><button class="features__app-link">Chrome</button></a> <a href="firefox-time-tracking.html"><button class="features__app-link">Firefox</button></a>
       </div>
       <div>
         <img src="assets/images/time-tracker-app-desktop.png" alt="Desktop time tracking app and time tracker for Mac and Windows">

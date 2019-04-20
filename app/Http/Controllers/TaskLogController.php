@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Task_log;
 use Illuminate\Http\Request;
+use Session;
+use Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class TaskLogController extends Controller
 {
@@ -14,7 +17,9 @@ class TaskLogController extends Controller
      */
     public function index()
     {
-        //
+        $user = Session::get('user');
+        $role = Session::get('role');
+        return view('back.tasklog')->with('user',$user)->with('role',$role);
     }
 
     /**
